@@ -12,6 +12,7 @@ class Ronda():
         self.nombre = ""
         self.es_entero = False
         self.opcion = ""
+        self.elegido = ""
 
     # metodos
     def iniciarJuego(self):
@@ -30,26 +31,37 @@ class Ronda():
         cat.setPreguntas()
 
     def Preguntar(self):
-        # mens = "Ingresar un numero entre (0 - 4): "
-        # preg = f'{cat.getPreguntas()[0][0]["pregunta"]}: '
-        # self.validarDato(mens, preg)
-        print("Seleccionar Opcion: ")
-        print("1 - Para ingresar Datos.")
-        print("cualquier tecla - para salir")
+
+        print("\n---- Vamos a Jugar! -----: ")
+        print("Para ingresar al juego. --> (1)")
+        print("Para salir --> (Cualquier tecla)")
         self.opcion = input(": ")
 
+        #salir = para salir por decision propia        
         salir = 0
+        # fila = la utilizo para subir de categoria de preguntas
+        fila = 0
         while self.opcion == '1':
             salir += 1
-            # cuerpo del juego
-
             
-            print("Seleccionar Opcion: ")
-            print("1 - Para ingresar Datos.")
-            print("cualquier tecla - para salir")
+            # elige aleatoriamente una de las cinco opciones
+            columna = random.randint(0, 4) 
+
+            # ------------------------------------
+            mensaje = "\nIngresar un numero entre (0 - 4): "
+            preg = f'{cat.getPreguntas()[fila][columna]["pregunta"]}: '
+            self.elegido = self.validarDato(mensaje, preg)
+
+            # ------------------------------------
+
+            print(salir)
+            print("\n---- Vamos a Jugar! -----: ")
+            print("Para ingresar al juego. --> (1)")
+            print("Para salir --> (Cualquier tecla)")
             self.opcion = input(": ")
-            if salir > 2:
+            if salir > 4:
                 self.opcion = "a"
+            fila += 1 
         else:
             print(f"\nSaliste del juego {jug.getNombre()}")
             print("Puntos: ")
