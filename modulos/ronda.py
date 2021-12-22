@@ -48,10 +48,19 @@ class Ronda():
             columna = random.randint(0, 4) 
 
             # ------------------------------------
-            mensaje = "\nIngresar un numero entre (0 - 4): "
+            mensaje = "Ingresar un numero entre (0 - 3): "
             preg = f'{cat.getPreguntas()[fila][columna]["pregunta"]}: '
-            self.elegido = self.validarDato(mensaje, preg)
+            opc = cat.getPreguntas()[fila][columna]["opciones"]
+            rCorrecta = cat.getPreguntas()[fila][columna]["respuesta"]
 
+            # self.elegido: es un numero, pero en formato cadena ej: '2'
+            self.elegido = self.validarDato(mensaje, preg, opc)
+
+
+            if self.elegido == int(rCorrecta):
+                print("Correcto")
+            else:
+                print("Incorrecto")
             # ------------------------------------
 
             print(salir)
@@ -68,23 +77,38 @@ class Ronda():
             print("Premios")
 
 
-    def validarDato(self, mensaje, pregunta):
+    def validarDato(self, mensaje, pregunta, opciones):
         seleccion = 0
         try:
-            print(mensaje)
-            seleccion = int(input(pregunta))
+            print(pregunta)
+            
+            num = 0
+            for i in opciones:
+                print(f'{num}: {i}.')
+                num += 1
+
+            print(f"\n{mensaje}")
+            seleccion = int(input(": "))
+            
             self.es_entero = True
         except:
-            print("Error: Deber ser un numero")
+            print("\n+++++ Error: Deber ser un numero! +++++\n")
             self.es_entero = False
         
-        while seleccion < 0 or seleccion > 4 or self.es_entero == False:
+        while seleccion < 0 or seleccion > 3 or self.es_entero == False:
             try:
-                print(mensaje)
-                seleccion = int(input(pregunta))
+                print(f"\n{pregunta}")
+                
+                num = 0
+                for i in opciones:
+                    print(f'{num}: {i}.')
+                    num += 1
+                
+                print(f"\nDebes {mensaje}")
+                seleccion = int(input(": "))
                 self.es_entero = True
             except:
-                print("Error: Deber ser un numero")
+                print("\n+++++ Error: Deber ser un numero! +++++\n")
                 self.es_entero = False
 
         return seleccion
