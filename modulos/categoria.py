@@ -89,7 +89,7 @@ class Categorias():
                     "dificultad": "2"
                 },
                 {
-                    "pregunta":"¿El puerto vga es para conectar el monitor?",
+                    "pregunta":"¿El puerto vga es para conectar el.. ?",
                     "opciones":[
                                 "Monitor",
                                 "Teclado",
@@ -114,7 +114,7 @@ class Categorias():
                     "pregunta":"¿En cual componente del computador se guarda la información de manera permanente?",
                     "opciones":[
                                 "Procesador",
-                                    "Memoria Ram",
+                                "Memoria Ram",
                                 "Disco Duro",
                                 "Tarjeta Madre"
                                 ],
@@ -216,7 +216,7 @@ class Categorias():
                 {
                     "pregunta":"¿Qué significa sobrecargar (overload) un método?",
                     "opciones":[
-                                "Crear un método con el mismo nombre pero diferentes argumentos"
+                                "Crear un método con el mismo nombre pero diferentes argumentos",
                                 "Editarlo para modificar su comportamiento",
                                 "Cambiarle el nombre dejándolo con la misma funcionalidad",
                                 "Añadirle funcionalidades a un método",

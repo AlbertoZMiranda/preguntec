@@ -16,17 +16,13 @@ class Ronda():
 
     # metodos
     def iniciarJuego(self):
-        self.nombre = input("Ingresar Nombre: ") 
-        
+        self.nombre = input("Ingresar Nombre: ")        
         
         jug.setNombre(self.nombre)
-        
     
     def nombreJugador(self):
-        print(jug.getNombre())
+        return jug.getNombre()   
     
-
-    # Metodos
     def cargarCuestionario(self):
         cat.setPreguntas()
 
@@ -45,37 +41,42 @@ class Ronda():
             salir += 1
             
             # elige aleatoriamente una de las cinco opciones
-            columna = random.randint(0, 4) 
-
+            columna = random.randint(0, 4)
+            matrizPregunta = cat.getPreguntas()[fila][columna]
             # ------------------------------------
             mensaje = "Ingresar un numero entre (0 - 3): "
-            preg = f'{cat.getPreguntas()[fila][columna]["pregunta"]}: '
-            opc = cat.getPreguntas()[fila][columna]["opciones"]
-            rCorrecta = cat.getPreguntas()[fila][columna]["respuesta"]
+            preg = f'{matrizPregunta["pregunta"]}: '
+            opc = matrizPregunta["opciones"]
+            rCorrecta = matrizPregunta["respuesta"]
 
             # self.elegido: es un numero, pero en formato cadena ej: '2'
             self.elegido = self.validarDato(mensaje, preg, opc)
 
-
+            cont = 0
             if self.elegido == int(rCorrecta):
-                print("Correcto")
-            else:
-                print("Incorrecto")
-            # ------------------------------------
+                print("----- CORRECTO :) -----")
+                cont += 1
+                
+                jug.setPuntos(jug.getPuntos() + cont)
 
-            print(salir)
-            print("\n---- Vamos a Jugar! -----: ")
-            print("Para ingresar al juego. --> (1)")
-            print("Para salir --> (Cualquier tecla)")
-            self.opcion = input(": ")
+            else:
+                print("----- INCORRECTO :( -----")
+                salir = 5
+            # ------------------------------------
+            
             if salir > 4:
                 self.opcion = "a"
-            fila += 1 
-        else:
-            print(f"\nSaliste del juego {jug.getNombre()}")
-            print("Puntos: ")
-            print("Premios")
+            else:
+                print(salir)
+                print("\n---- Vamos a Jugar! -----: ")
+                print("Para ingresar al juego. --> (1)")
+                print("Para salir --> (Cualquier tecla)")
+                self.opcion = input(": ")
+                fila += 1
 
+        # llamamos los resultados desde la clase jugador 
+        jug.setPremio()
+        print(jug.infoJugador(jug.getNombre(), jug.getPuntos(), jug.getPremio()))
 
     def validarDato(self, mensaje, pregunta, opciones):
         seleccion = 0

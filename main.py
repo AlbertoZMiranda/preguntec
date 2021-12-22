@@ -7,8 +7,6 @@ vamosA = ronda.Ronda()
 
 vamosA.iniciarJuego()
 
-vamosA.nombreJugador()
-
 vamosA.cargarCuestionario()
 
 vamosA.Preguntar()
