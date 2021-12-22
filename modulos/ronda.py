@@ -13,10 +13,19 @@ class Ronda():
         self.es_entero = False
         self.opcion = ""
         self.elegido = ""
+        self.msgFinal = ""
 
     # metodos
     def iniciarJuego(self):
-        self.nombre = input("Ingresar Nombre: ")        
+        print("""
+        ------   BIENVENIDO A PREGUNTEC   ------
+        Es un Juego de Preguntas Sobre Tecnologia
+
+        por cada pregunta corectamente constestada ganaras '1 punto'
+        cada punto sirve para 'reclamar un premio'
+
+        """)
+        self.nombre = input("Ingresar Tu Nombre: ")        
         
         jug.setNombre(self.nombre)
     
@@ -43,31 +52,32 @@ class Ronda():
             # elige aleatoriamente una de las cinco opciones
             columna = random.randint(0, 4)
             matrizPregunta = cat.getPreguntas()[fila][columna]
-            # ------------------------------------
+            #
             mensaje = "Ingresar un numero entre (0 - 3): "
-            preg = f'{matrizPregunta["pregunta"]}: '
+            preg = f'\n{matrizPregunta["pregunta"]}: '
             opc = matrizPregunta["opciones"]
             rCorrecta = matrizPregunta["respuesta"]
 
             # self.elegido: es un numero, pero en formato cadena ej: '2'
             self.elegido = self.validarDato(mensaje, preg, opc)
 
+            # -----------------------------------
             cont = 0
             if self.elegido == int(rCorrecta):
                 print("----- CORRECTO :) -----")
                 cont += 1
                 
                 jug.setPuntos(jug.getPuntos() + cont)
-
             else:
                 print("----- INCORRECTO :( -----")
                 salir = 5
+                jug.setPuntos(0)
             # ------------------------------------
             
             if salir > 4:
                 self.opcion = "a"
+                self.msgFinal = "Completaste las rondas: felicitaciones"
             else:
-                print(salir)
                 print("\n---- Vamos a Jugar! -----: ")
                 print("Para ingresar al juego. --> (1)")
                 print("Para salir --> (Cualquier tecla)")
@@ -76,8 +86,10 @@ class Ronda():
 
         # llamamos los resultados desde la clase jugador 
         jug.setPremio()
-        print(jug.infoJugador(jug.getNombre(), jug.getPuntos(), jug.getPremio()))
+        print(jug.infoJugador(jug.getNombre(), jug.getPuntos(), jug.getPremio(), self.msgFinal))
 
+    #ValidarDato: Metodo que restringe el ingreso de datos tipo cadena,
+    # restringe los datos menores a cero y mayores a 3
     def validarDato(self, mensaje, pregunta, opciones):
         seleccion = 0
         try:
@@ -85,7 +97,7 @@ class Ronda():
             
             num = 0
             for i in opciones:
-                print(f'{num}: {i}.')
+                print(f'   {num}: {i}.')
                 num += 1
 
             print(f"\n{mensaje}")
@@ -93,7 +105,7 @@ class Ronda():
             
             self.es_entero = True
         except:
-            print("\n+++++ Error: Deber ser un numero! +++++\n")
+            print("\n+++++ Error: Deber ser un numero! +++++")
             self.es_entero = False
         
         while seleccion < 0 or seleccion > 3 or self.es_entero == False:
@@ -102,14 +114,14 @@ class Ronda():
                 
                 num = 0
                 for i in opciones:
-                    print(f'{num}: {i}.')
+                    print(f'  {num}: {i}.')
                     num += 1
                 
                 print(f"\nDebes {mensaje}")
                 seleccion = int(input(": "))
                 self.es_entero = True
             except:
-                print("\n+++++ Error: Deber ser un numero! +++++\n")
+                print("\n+++++ Error: Deber ser un numero! +++++")
                 self.es_entero = False
 
         return seleccion

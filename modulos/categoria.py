@@ -8,27 +8,27 @@ class Categorias():
     # Getter and Setter
     def setPreguntas(self):
         self.preguntas = [
-            [ # Primera Categoria
+            [ # Primera Categoria Logica
                 {
-                    "pregunta":"¿Como se escribe amarillo en inglés?",
+                    "pregunta":"¿Que grupo continúa en la siguiente serie: a12r,b9q,c6p?",
                     "opciones":[
-                                "Blue",
-                                "Amarillow",
-                                "Yellow",
-                                "Orange"
+                                "c5t",
+                                "d3s",
+                                "s5z",
+                                "d3o" # Ok
                                 ],
-                    "respuesta": "2",
+                    "respuesta": "3",
                     "dificultad": "1"
                 },
                 {
-                    "pregunta":"¿Capital de colombia?",
+                    "pregunta":"¿Si me encuentro en una maratón y en plena carrera mi persona le gana al segundo, en qué posición llego?",
                     "opciones":[
-                                "Chile",
-                                "Medellin",
-                                "Cartagena",
-                                "Bogota"
+                                "El Primero",
+                                "El Segundo",# Ok
+                                "El Tercero",
+                                "El Ganador"
                                 ],
-                    "respuesta": "3",
+                    "respuesta": "1",
                     "dificultad": "2"
                 },
                 {
@@ -43,23 +43,23 @@ class Categorias():
                     "dificultad": "3"
                 },
                 {                            
-                    "pregunta":"¿Qué son los humanos: omnívoros, herbívoros o carnívoros?",
+                    "pregunta":"¿SACO es a ASCO como 7683 es a...?",
                     "opciones":[
-                                "Carnívoros",
-                                "Omnívoros",
-                                "Herbívoros",
-                                "Viviparos"
+                                "3867",
+                                "6783", # Ok
+                                "3678",
+                                "8376"
                                 ],
                     "respuesta": "1",
                     "dificultad": "4"
                 },
                 {
-                    "pregunta":"¿Qué deporte practicaba Michael Jordan?",
+                    "pregunta":"¿Algunos meses tienen 31 días, algunos meses tienen 30 días. ¿Cuántos tienen 28 días?",
                     "opciones":[
-                                "Golf.",
-                                "Boxeo.",
-                                "Futbol.",
-                                "Baloncesto."
+                                "Dos",
+                                "Ninguno.",
+                                "Febrero", 
+                                "Todos" # Ok
                                 ],
                     "respuesta": "3",
                     "dificultad": "5"

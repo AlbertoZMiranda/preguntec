@@ -6,6 +6,7 @@ class Jugador():
         self.puntos = 0
         self.premio = ""
         self.info = ""
+        self.acumPremios = []
 
     # Getter and Setter
     def setNombre(self, nombre):
@@ -19,17 +20,22 @@ class Jugador():
         return self.puntos
 
     def setPremio(self):
-        self.premio = ['No hay premio', 'Televisor 24', 'Portatil 500 GB 4GB Ram', 'Iphone 11', 'Pulsar 200cc','Portatil t15 2da generacion']
+        self.premio = ['No hay premio','Un Perfume Salvaje', 'Audifonos Senses', 'Un Portatil 500 GB 4GB Ram', 'Un Iphone 11','Un Portatil Lenovo ThinkPad t15 2da generacion']
     def getPremio(self):
         return self.premio[self.puntos]
+           
 
     # Metodo
-    def infoJugador(self, nombre, puntos, premio):
+    def infoJugador(self, nombre, puntos, premio, msgF):
         self.info = ""
         self.setNombre = nombre
         self.premio = premio
         self.puntos = puntos
 
-        self.info = f" Nombre: {self.setNombre} \n Puntos: {self.puntos} \nPremios: {self.premio}"         
+        msg = ""
+        if self.puntos == 5:
+            msg = "Terminaste Todas Las rondas: Felicitaciones"
+
+        self.info = f"\n--- TERMINO EL JUEGO {msg.upper()}---\n Nombre: {self.setNombre} \n Puntos: {self.puntos} \nPremios: {self.premio}"         
         return self.info
     
