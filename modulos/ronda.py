@@ -54,12 +54,13 @@ class Ronda():
             matrizPregunta = cat.getPreguntas()[fila][columna]
             #
             mensaje = "Ingresar un numero entre (0 - 3): "
-            preg = f'\n{matrizPregunta["pregunta"]}: '
+            preg = f'{matrizPregunta["pregunta"]}: '
             opc = matrizPregunta["opciones"]
             rCorrecta = matrizPregunta["respuesta"]
+            nameCat = matrizPregunta["nivel"]
 
             # self.elegido: es un numero, pero en formato cadena ej: '2'
-            self.elegido = self.validarDato(mensaje, preg, opc)
+            self.elegido = self.validarDato(mensaje, preg, opc, nameCat)
 
             # -----------------------------------
             cont = 0
@@ -90,9 +91,10 @@ class Ronda():
 
     #ValidarDato: Metodo que restringe el ingreso de datos tipo cadena,
     # restringe los datos menores a cero y mayores a 3
-    def validarDato(self, mensaje, pregunta, opciones):
+    def validarDato(self, mensaje, pregunta, opciones, nameCat):
         seleccion = 0
         try:
+            print(f"\n---- CATEGORIA {nameCat.upper()} ----")
             print(pregunta)
             
             num = 0
@@ -110,7 +112,8 @@ class Ronda():
         
         while seleccion < 0 or seleccion > 3 or self.es_entero == False:
             try:
-                print(f"\n{pregunta}")
+                print(f"\n---- CATEGORIA {nameCat.upper()} ----")
+                print(f"{pregunta}")
                 
                 num = 0
                 for i in opciones:

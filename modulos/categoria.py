@@ -18,7 +18,7 @@ class Categorias():
                                 "d3o" # Ok
                                 ],
                     "respuesta": "3",
-                    "dificultad": "1"
+                    "nivel": "LOGICA"
                 },
                 {
                     "pregunta":"¿Si me encuentro en una maratón y en plena carrera mi persona le gana al segundo, en qué posición llego?",
@@ -29,7 +29,7 @@ class Categorias():
                                 "El Ganador"
                                 ],
                     "respuesta": "1",
-                    "dificultad": "2"
+                    "nivel": "LOGICA"
                 },
                 {
                     "pregunta":"¿Qué cantidad de huesos en el cuerpo humano?",
@@ -40,7 +40,7 @@ class Categorias():
                                 "226"
                                 ],
                     "respuesta": "0",
-                    "dificultad": "3"
+                    "nivel": "LOGICA"
                 },
                 {                            
                     "pregunta":"¿SACO es a ASCO como 7683 es a...?",
@@ -51,7 +51,7 @@ class Categorias():
                                 "8376"
                                 ],
                     "respuesta": "1",
-                    "dificultad": "4"
+                    "nivel": "LOGICA"
                 },
                 {
                     "pregunta":"¿Algunos meses tienen 31 días, algunos meses tienen 30 días. ¿Cuántos tienen 28 días?",
@@ -62,7 +62,7 @@ class Categorias():
                                 "Todos" # Ok
                                 ],
                     "respuesta": "3",
-                    "dificultad": "5"
+                    "nivel": "LOGICA"
                 }
             ],
             [ # Segunda Categoria -> Hardware
@@ -75,7 +75,7 @@ class Categorias():
                                 "Tarjeta con un gran circuito impreso."
                                 ],
                     "respuesta": "3",
-                    "dificultad": "1"
+                    "nivel": "HARDWARE"
                 },
                 {
                     "pregunta":"¿Que es el hardware?",
@@ -86,7 +86,7 @@ class Categorias():
                                 "Disco duro y los archivos que contiene"
                                 ],
                     "respuesta": "1",
-                    "dificultad": "2"
+                    "nivel": "HARDWARE"
                 },
                 {
                     "pregunta":"¿El puerto vga es para conectar el.. ?",
@@ -97,7 +97,7 @@ class Categorias():
                                 "Energia"
                                 ],
                     "respuesta": "0",
-                    "dificultad": "3"
+                    "nivel": "HARDWARE"
                 },
                 {
                     "pregunta":"¿La función del Mouse es?",
@@ -108,7 +108,7 @@ class Categorias():
                                 "Almacenar información."
                             ],
                     "respuesta": "1",
-                    "dificultad": "4"
+                    "nivel": "HARDWARE"
                 },
                 {
                     "pregunta":"¿En cual componente del computador se guarda la información de manera permanente?",
@@ -119,7 +119,7 @@ class Categorias():
                                 "Tarjeta Madre"
                                 ],
                     "respuesta": "2",
-                    "dificultad": "5"
+                    "nivel": "HARDWARE"
                 }
             ],
             [ # Tercera Categoria -> Programación
@@ -132,7 +132,7 @@ class Categorias():
                                 "Es un lenguaje Binario"
                                 ],
                     "respuesta": "2",
-                    "dificultad": "1"
+                    "nivel": "PROGRAMACIÓN"
                 },
                 {
                     "pregunta":"¿Selecciona el tipo de dato referencia?",
@@ -143,7 +143,7 @@ class Categorias():
                                 "Float"
                                 ],                          
                     "respuesta": "1",
-                    "dificultad": "2"
+                    "nivel": "PROGRAMACIÓN"
                 },
                 {
                     "pregunta":"¿Traduce el codigo mientras lo ejecuta?",
@@ -154,7 +154,7 @@ class Categorias():
                                 "Programación Orientada a Objeto"
                                 ],
                     "respuesta": "2",
-                    "dificultad": "3"
+                    "nivel": "PROGRAMACIÓN"
                 },
                 {
                     "pregunta":"¿Significado de Clase?",
@@ -165,7 +165,7 @@ class Categorias():
                                 "Es una plantilla para la creación de varios objetos."
                                 ],
                     "respuesta": "3",
-                    "dificultad": "4"
+                    "nivel": "PROGRAMACIÓN"
                 },
                 {
                     "pregunta":"¿Cual es el lenguaje que ha revolucionado la web?",
@@ -176,7 +176,7 @@ class Categorias():
                                 "Python."
                                 ],
                     "respuesta": "0",
-                    "dificultad": "5"
+                    "nivel": "PROGRAMACIÓN"
                 } 
             ],
             [# Cuarta Categoria -> POO
@@ -189,7 +189,7 @@ class Categorias():
                                 "Su interfaz y los eventos asociados"
                                 ],
                     "respuesta": "1",
-                    "dificultad": "1"
+                    "nivel": "PROGRAMACIÓN ORIENTADA A OBJETO"
                 },
                 {
                     "pregunta":"¿Qué código de los siguientes tiene que ver con la herencia?",
@@ -200,7 +200,7 @@ class Categorias():
                                 "public class Componente belong to Producto"
                                 ],
                     "respuesta": "0",
-                    "dificultad": "2"
+                    "nivel": "PROGRAMACIÓN ORIENTADA A OBJETO"
                 },
                 {
                     "pregunta":"¿Qué significa instanciar una clase?",
@@ -211,7 +211,7 @@ class Categorias():
                                 "Conectar dos clases entre sí"
                                 ],
                     "respuesta": "1",
-                    "dificultad": "3"
+                    "nivel": "PROGRAMACIÓN ORIENTADA A OBJETO"
                 },
                 {
                     "pregunta":"¿Qué significa sobrecargar (overload) un método?",
@@ -222,7 +222,7 @@ class Categorias():
                                 "Añadirle funcionalidades a un método",
                                 ],
                     "respuesta": "0",
-                    "dificultad": "4"
+                    "nivel": "PROGRAMACIÓN ORIENTADA A OBJETO"
                 },
                 {
                     "pregunta":"¿Cual no es un modificador de acceso?",
@@ -233,7 +233,7 @@ class Categorias():
                                 "Protected"
                                 ],
                     "respuesta": "2",
-                    "dificultad": "5"
+                    "nivel": "PROGRAMACIÓN ORIENTADA A OBJETO"
                 } 
             ],
             [# Quinta Categoria -> SQL
@@ -246,7 +246,7 @@ class Categorias():
                                 "XML"
                                 ],
                     "respuesta": "3",
-                    "dificultad": "1"
+                    "nivel": "SQL"
                 }, 
 
                 {
@@ -258,7 +258,7 @@ class Categorias():
                                 "Muestra todo lo que contiene una tabla"
                                 ],
                     "respuesta": "0",
-                    "dificultad": "2"
+                    "nivel": "SQL"
                 },
                 {
                     "pregunta":"¿De que trata DDL (Data Definition Language)?",
@@ -269,7 +269,7 @@ class Categorias():
                                 "Permite llevar a cabo operaciones tales como; Create, Delete, Alter" # DDL
                                 ],
                     "respuesta": "3",
-                    "dificultad": "3"
+                    "nivel": "SQL"
                 },
                 {
                     "pregunta":"¿Sabes qué es una Primary Key?",
@@ -280,7 +280,7 @@ class Categorias():
                                 "Significa la inexistencia de un carácter, ya sea porque es desconocido o no está disponible."
                                 ],
                     "respuesta": "2",
-                    "dificultad": "4"
+                    "nivel": "SQL"
                 },
                 {
                     "pregunta":"¿Qué Significa RDBMS ?",
@@ -291,7 +291,7 @@ class Categorias():
                                 "es una colección de registros y su información en una sola vista."
                                 ],
                     "respuesta": "1",
-                    "dificultad": "5"
+                    "nivel": "SQL"
                 } 
             ]
         ]

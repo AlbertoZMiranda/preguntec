@@ -36,6 +36,6 @@ class Jugador():
         if self.puntos == 5:
             msg = "Terminaste Todas Las rondas: Felicitaciones"
 
-        self.info = f"\n--- TERMINO EL JUEGO {msg.upper()}---\n Nombre: {self.setNombre} \n Puntos: {self.puntos} \nPremios: {self.premio}"         
+        self.info = f"\n--- TERMINO EL JUEGO {msg.upper()}---\n Nombre: {self.setNombre} \n Puntos: {self.puntos} \nPremio: {self.premio}"         
         return self.info
     
