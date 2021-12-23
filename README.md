@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# preguntec
+>>>>>>> b2a009db914bc0bcc4878b596b680ebc331e7ed5
 <h1>PREGUNTEC</h1>
 Juego de preguntas con diferentes opciones con única respuesta,
 el cual está orientado a la tecnología de hay el nombre:
